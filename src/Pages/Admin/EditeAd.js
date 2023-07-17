@@ -44,7 +44,8 @@ export default function EditeAd() {
 
     useEffect( () => {
         const get = async () => {
-            await dispatch( getStores( `api/manage/stores/${state.id} ` ) )
+            // await dispatch( getStores( `api/manage/stores/${state.id} ` ) )
+            await dispatch( getStores( `api/manage/stores` ) )
         }
         get();
     }, [] )
@@ -101,7 +102,7 @@ export default function EditeAd() {
         if ( !LoadingAds && addAds && addAds.data && addAds.status && addAds.status === 1 ) {
             notifySuccess( "Add advertisements success" )
             setTimeout( () => {
-                window.location.href = "/ads"
+                window.location.href = "/"
             }, 1000 )
 
         }

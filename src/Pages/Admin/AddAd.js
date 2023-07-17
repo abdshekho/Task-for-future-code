@@ -97,7 +97,7 @@ export default function AddAd() {
         if ( !LoadingAds && addAds && addAds.data && addAds.status && addAds.status === 1 ) {
             notifySuccess( "Add advertisements success" )
             setTimeout( () => {
-                window.location.href = "/ads"
+                window.location.href = "/"
             }, 1000 )
 
         }

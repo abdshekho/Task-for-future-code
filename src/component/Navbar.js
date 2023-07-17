@@ -28,7 +28,7 @@ function DrawerAppBar( props ) {
     const userLoggedIn = localStorage.getItem( "user" ) != null ? JSON.parse( localStorage.getItem( "user" ) ).name : ""
     const navigate = useNavigate();
     const goToCreate = () => { navigate( "create" ) }
-    const goToitems = () => { navigate( "/ads" ) }
+    const goToitems = () => { navigate( "/" ) }
     const SignOUt = () => {
         localStorage.removeItem( 'user' )
         localStorage.removeItem( 'token' )

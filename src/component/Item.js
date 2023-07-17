@@ -33,7 +33,7 @@ export default function Item( { id, title_ar, title_en, description_ar, descript
         await dispatch( deleteAd( `api/manage/ads/${id}` ) )
         notifySuccess( "Ad is deleted" )
         handleClose();
-        window.location.href = "/ads"
+        window.location.href = "/"
     }
     return (
 

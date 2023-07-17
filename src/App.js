@@ -25,7 +25,7 @@ function App() {
           </Route>
 
           <Route element={ <ProtectedRoute auth={ isAdmin } /> }>
-            <Route path='/ads' element={ <Items /> } />
+            <Route index element={ <Items /> } />
             <Route path='/create' element={ <AddAd /> } />
             <Route path='/Edit/:id' element={ <EditeAd /> } />
           </Route>

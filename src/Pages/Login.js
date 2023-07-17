@@ -36,7 +36,7 @@ const Login = () => {
                 localStorage.setItem( "token", posts.data.token )
                 localStorage.setItem( "user", JSON.stringify( posts.data.user ) )
                 setTimeout( () => {
-                    window.location.href = "/ads"
+                    window.location.href = "/"
                 }, 1000 )
 
             }
