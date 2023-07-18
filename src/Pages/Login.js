@@ -7,7 +7,7 @@ import { loginSlice } from "../redux/postSlice";
 import { postLogin } from "../api/postApi";
 import axios from "axios";
 import TextField from '@mui/material/TextField';
-import { Button } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import { notifyError, notifySuccess } from "../hooks/useNotification";
 import { ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -50,10 +50,10 @@ const Login = () => {
 
     return (
         <div className="container ">
-            <div className="d-flex flex-column align-items-center  justify-content-center vh-100 ">
+            <div className="d-flex flex-column align-items-center  justify-content-center vh-100 badge rounded-pill">
 
                 <form onSubmit={ handleSubmit( ( data ) => SubmitLogin( data ) ) } className="text-bg-light p-5">
-                <h1 className="mb-5 text-center">Login</h1>
+                    <h1 className="mb-5 text-center">Login</h1>
                     <div className="mb-3">
                         {/* <label htmlFor="phone" className="form-label">phone address</label> */ }
                         <TextField   { ...register( "phone" ) } type="number" className="" id="text" label="Phone" fullWidth />
@@ -71,6 +71,7 @@ const Login = () => {
                         </Button>
                     </div>
                 </form>
+            { isLoading ? <CircularProgress /> : <div></div> }
             </div>
             <ToastContainer />
         </div>
